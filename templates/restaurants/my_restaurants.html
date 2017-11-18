@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Available Restaurants{% endblock %}
+{% block link %} 
+<link rel="stylesheet" href="/static/restaurants.css">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
+<link href='https://fonts.googleapis.com/css?family=Croissant One' rel='stylesheet'>
+{% endblock %}
+{% block content%}
+<body>
+
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-target="#mynavbar" data-toggle="collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<h3 class="navbar-brand">Food <i class="glyphicon glyphicon-cutlery"></i> Zone</h3>
+		</div>
+		<div class="collapse navbar-collapse" id="mynavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="{{url_for('restaurants')}}">Home <span class="glyphicon glyphicon-home"></span></a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			{% if session['email'] %}
+			<li><a href="{{url_for('my_restaurants')}}">My Restaurants</a></li>
+			<li><a class="unstyle" href="{{url_for('new')}}">Create Restaurant</a></li>
+			<li><a href="{{url_for('logout')}}">Logout <span class="glyphicon glyphicon-user"></span></a></li>
+			<li><img src="{{session['picture']}}" alt="display photo" class="img-circle" width="45px"></li>
+			{% else %}
+			<li><a href="{{url_for('login')}}">Sign in <span class="glyphicon glyphicon-user"></span></a></li>
+			{% endif %}
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-offset-3 col-sm-6">
+			<div class="panel panel-default">
+				<div class="panel-heading text-center"><h2><strong>My Restaurants</strong></h2></div>
+				<div class="panel-body">
+					{% with messages = get_flashed_messages() %}
+					{% if messages %}
+					{% for message in messages %}
+					<div class="alert alert-success alert-dismissable">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					{{ message }}</div>
+					{% endfor %}
+					{% endif %}
+					{% endwith %}
+					<ul class="list-unstyled">
+						{% for i in myrestaurants %}
+						<li><h3><span class="glyphicon glyphicon-star"></span> <a class="unstyle" href="{{url_for('menu', restaurant_id=i.id)}}">{{ i.name }}
+						</a></h3>
+
+						{% if session['username'] %}
+						{% if i.user == session['username'] %}
+						<div class="row">
+							<div class="col-sm-offset-8 col-sm-1">
+							<a class="unstyle" href="{{url_for('edit', restaurant_id=i.id)}}">
+							<button class="btn btn-primary">Edit</button></a></div>
+							<div class="col-sm-1">
+							<button type="button" class="btn btn-danger del" data-toggle="modal" data-target="#myModal{{i.id}}">Delete</button>
+							<div class="modal fade" id="myModal{{i.id}}" role="dialog">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header text-center">
+											<h3 class="modal-title">Are you sure?</h3>
+										</div>
+										<div class="modal-body">
+											<div class="row">
+												<div class="col-sm-6">
+													<a href="{{url_for('delete', restaurant_id=i.id)}}">
+													<button class="btn btn-danger del pull-right" type=button>Delete</button></a>	
+												</div>
+												<div class="col-sm-6">
+													<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+						{% endif %}
+						{% endif %}
+						<hr>
+						</li>
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+{% endblock %}

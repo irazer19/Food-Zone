@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Create Restaurant{% endblock %}
+{% block link %} 
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
+{% endblock %}
+{% block content %}
+<body>
+<div class="container text-center">
+	<div class="col-sm-offset-3 col-sm-6">
+		<div class="well" style="background-color: #f4fccf; color: #4a5627;">
+			<h2 style="font-family: 'Berkshire Swash'; font-size: 2.2em; color: #8e000d;">Create Restaurant</h2>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row" style="font-size: 1.5em;">
+		<div class="col-sm-offset-3 col-sm-6">
+			{% from "_formhelpers.html" import render_field %}
+			<form action="{{url_for('new')}}" method="POST" role="form">
+				{{ form.hidden_tag() }}
+				{{ render_field(form.restaurant_name, class="form-control") }}
+
+				<button class="btn btn-success pull-left" type="submit">Create</button>
+				<a href="{{url_for('restaurants')}}">
+				<button class="btn btn-success pull-right" type="button">Cancel</button></a>
+			</form>			
+		</div>
+	</div>
+</div>
+</body>
+
+{% endblock %}
