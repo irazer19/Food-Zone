@@ -1,0 +1,83 @@
+body {
+	background-image: url('/static/login-bg.jpg');
+	background-attachment: fixed;
+}
+	
+.well-sm {
+	padding-top: 40px;
+}
+	
+h3 {
+	padding-left: 10px;
+	font-size: 1.8em;
+	color: #8e000d !important;
+	font-family: 'Croissant One';
+}
+	
+.well {
+	background-color: #f8ffc9;
+}
+	
+.navbar-default {
+	background-color: #ffeace !important;
+	border-color: #ffeace !important;
+}
+
+.navbar-brand {
+	font-size: 1.5em;
+}
+
+.modal-header {
+	background-color: #eafff8 !important;
+}
+	
+.active a {
+	background-color: #fff2f2 !important;
+}
+
+a {
+	text-decoration: none !important;
+	color: #8e000d !important;
+}
+
+a:hover {
+	color: black !important;
+}
+	
+.navbar-header a i {
+	color: black;
+}
+	
+.navbar-header h3 {
+	margin: 0px 10px 0px 10px;
+	color: black !important;
+}
+
+.footer {
+	background-color: black;
+	color: white;
+}
+
+i {
+	font-size: 1.4em !important;
+}
+
+.footer h5 a {
+	color: white !important;
+}
+
+.fa-twitter:hover {
+	color: #91ffea !important;
+}
+
+.fa-facebook-square:hover {
+	color: #5ca9ed !important;
+}
+
+.fa-instagram:hover {
+	color: #ed5c87 !important;
+}
+
+.footer .col-sm-8 h5 {
+	padding-top: 4px;
+}

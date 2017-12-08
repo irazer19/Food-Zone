@@ -1,0 +1,11 @@
+body {
+	background-image: url('/static/bg-image.jpeg');
+	background-attachment: fixed;
+}
+
+@media screen and (max-width: 1192px) and (min-width: 764px) {
+	body {
+		background-image: url('/static/bg-image-ipad.jpg');
+		background-attachment: fixed;
+	}
+}

@@ -1,0 +1,193 @@
+body{
+	background-image: url(/static/menu-bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.container {
+	padding-top: 70px !important;
+}
+.unstyle {
+	text-decoration: none !important;
+}
+
+.panel-heading, .panel-footer {
+	background-color: #eeffc9 !important;
+}
+
+.panel-heading {
+	letter-spacing: 15px;
+}
+
+.edit {
+	margin-left: 25px;
+}
+
+@media screen and (max-width: 1192px) and (min-width: 764px) {
+	.del {
+		margin-left: -30px;
+	}
+
+	.edit {
+		margin-left: -50px;
+	}
+
+	.rest_name {
+		font-size: 0.8em;
+	}
+
+	body {
+	background-image: url(/static/menu-bg-ipad.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	}
+}
+
+@media screen and (max-width: 764px) {
+	.edit {
+		margin-left: -50px;
+		margin-bottom: 15px;
+	}
+
+	.del {
+		margin-left: -50px;
+	}
+
+	.rest_name {
+		font-size: 0.8em;
+	}
+}
+
+.category {
+	display: block;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	border: 1px solid black;
+	box-shadow: 10px 10px 15px grey;
+	margin-bottom: 20px;
+}
+
+button {
+	box-shadow: 4px 4px 5px grey;
+}
+
+h4 {
+	font-size: 1.4em;
+	padding-left: 10px;
+}
+
+.appetizers {
+	color: #7a3d00;
+	border-color: #7a3d00 !important;
+}
+
+.appetizers .category {
+	background-color: rgba(96, 68, 0, 0.2);
+}
+
+.main_course {
+	color: #134205;
+}
+
+.main_course .category {
+	background-color: rgba(6, 104, 53, 0.2);
+}
+
+.desserts {
+	color: #004159;
+}
+
+.desserts .category {
+	background-color: rgba(0, 41, 96, 0.2);
+}
+
+.beverages {
+	color: #470025;
+}
+
+.beverages .category {
+	background-color: rgba(96, 0, 6, 0.2);
+}
+
+.modal-header {
+	background-color: #f1ffe0;
+}
+
+h2 {
+	font-family: 'Berkshire Swash'; 
+	font-size: 2.2em; 
+	color: #8e000d;
+}
+
+h3 {
+	font-family: 'Great Vibes';
+	font-size: 3em;
+}
+
+h4, h5 {
+	font-family: 'Inknut Antiqua';
+	line-height: 45px;
+}
+
+.navbar-default {
+	background-color: #ffeace !important;
+	border-color: #ffeace !important;
+}
+
+.navbar-brand {
+	font-size: 1.5em;
+	color: #8e000d !important;
+}
+
+.nav li a {
+	color: #8e000d !important;
+}
+
+.nav li a:hover {
+	color: black !important;
+}
+
+img {
+	margin-bottom: 15px;
+	box-shadow: 5px 5px 2px grey;
+}
+
+ul li img {
+	box-shadow: none !important;
+	margin: 4px 5px 2px 0px !important;
+}
+
+.navbar-header h3 {
+	margin: 0px 10px 0px 10px;
+	font-family: 'Croissant One';
+	color: black !important;
+}
+
+.shift {
+	margin-left: 38px;
+}
+
+#appetizers, #main_course, #dessert, #beverages {
+	padding-top: 40px;
+}
+
+.active a {
+	background-color: #fff2f2 !important;
+}
+
+h5 {
+	line-height: 35px;
+}
+
+.btn-success {
+	margin-top: 10px;
+	margin-left: 4px;
+}
+
+.col-sm-8 h5 {
+	line-height: 24px;
+}
+
+.navbar-header a i {
+	color: black;
+}

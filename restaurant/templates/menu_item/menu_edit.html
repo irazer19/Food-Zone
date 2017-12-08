@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Create Menu item{% endblock %}
+{% block content %}
+<body style="background-image: url('/static/menu-bg.jpg');">
+    <div class="container text-center">
+        <div class="row">
+        <div class="col-sm-offset-3 col-sm-6 well" style="background-color: #e3ffc1;">
+        <h2 style="font-family: 'Berkshire Swash'; font-size: 2.2em; color: #8e000d;">Update Menu item</h2>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-3 col-sm-6 well" style="background-color: #f1ffe0;">
+                {% from "_formhelpers.html" import render_field %}
+                <form action="{{url_for('menu_edit', restaurant_id=restaurant_id, menu_id=menu_id)}}" method="POST" role="form" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+
+                    {{ form.course.label }}
+                    {{ form.course(value=course) }}
+                    {{ render_field(form.image, class="form-control", value=name) }}
+                    {{ render_field(form.item_name, class="form-control", value=name) }} 
+                    {{ render_field(form.price, class="form-control", value=price) }}
+                    <button class="btn btn-success pull-left update" type="submit">Update Menu</button>
+                    <a href="{{url_for('menu', restaurant_id=restaurant_id)}}">
+                        <button class="btn btn-info pull-right update" type="button">Cancel</button>
+                    </a>
+                </form>         
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
