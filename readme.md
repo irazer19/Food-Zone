@@ -1,6 +1,6 @@
 # Food Zone
 This app can help the owners of the restaurant make their menu items go live among the customers.
-Owners can manage their Restaurat name and edit the menu items in every way to present it best to their customers.
+Owners can manage their Restaurant name and edit the menu items in every way to present it best to their customers.
 
 ## Requirements:
 1. Linux based virtual machine. You can learn the installation of the virtual machine using [Vagrant](https://www.vagrantup.com/) and [Virtual box](https://www.virtualbox.org/wiki/Downloads) [here](http://www.bogotobogo.com/DevOps/Vagrant/Vagrant_VirtualBox.php).
