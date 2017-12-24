@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath restaurant:app
+web: gunicorn --pythonpath manage:app
