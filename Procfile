@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath manage:manager
+web: gunicorn manage:manager
