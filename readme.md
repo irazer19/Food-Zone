@@ -14,6 +14,11 @@ Owners can manage their Restaurant name and edit the menu items in every way to 
 5. After the succesfull installation of the linux os. Run the command `vagrant ssh` to start the machine.
 6. Now `cd` into the repository **Food-Zone**.
 7. Activate the virtual environment by using the command `source venv/bin/activate`.
-8. Use the command `python manage.py runserver` to run the app
-9. Open your browser and go to `localhost:9000` to start using the Food Zone app.
-10. Enjoy!
+8. Open postgresql with `psql postgres` or `psql`
+9. Create a database for the app by the command `CREATE DATABASE restaurant` then quit postgresql using `\q`
+10. Now open python shell by using `python`
+11. Use to command `from restaurant import db` to import the sqlalchemy database object.
+12. Now create all the tables in the database using the command `db.create_all()` and quit python shell by `exit()`
+13. Use the command `python manage.py runserver` to run the app
+14. Open your browser and go to `localhost:5000` to start using the Food Zone app.
+15. Enjoy!
