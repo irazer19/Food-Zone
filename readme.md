@@ -6,7 +6,7 @@ Owners can manage their Restaurant name and edit the menu items in every way to 
 1. Linux based virtual machine. You can learn the installation of the virtual machine using [Vagrant](https://www.vagrantup.com/) and [Virtual box](https://www.virtualbox.org/wiki/Downloads) [here](http://www.bogotobogo.com/DevOps/Vagrant/Vagrant_VirtualBox.php).
 2. Download and install [git](https://git-scm.com/downloads)
 
-## How to run the Twitter-clone app.
+## How to run the Food Zone app.
 1. Clone the repository in your vagrant shared folder directory.
 2. Open git bash
 3. Go to the directory where your **vagrantfile** exists.
